@@ -1,0 +1,31 @@
+:root {
+    --background-color: #101010;
+    --content-background-color: #252525;
+    --foreground-color: #313131;
+    --btn-green: #217121;
+    --btn-red: #720000;
+    --input-field: #ABABAB;
+}
+body {
+    background-color: var(--background-color);
+}
+#homeContent {
+    margin: auto;
+    background-color: var(--content-background-color);
+    width: 1700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#teamInputs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+h1 {
+    color: white;
+}
+label {
+    color: white;
+}
