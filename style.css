@@ -8,6 +8,7 @@
 }
 body {
     background-color: var(--background-color);
+    color: white;
 }
 #homeContent {
     margin: auto;
@@ -28,4 +29,8 @@ h1 {
 }
 label {
     color: white;
+}
+img {
+    width: 30px;
+
 }

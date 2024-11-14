@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eredményszámláló | Kijelző</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="display: flex; gap: 50px">
+        <div>
+            <h2 id="t1Title">Csapat 1 neve</h2>
+            <p id="t1PointDisplay">2</p>
+            <button type="button" onclick="t1Plus()">+</button>
+            <button type="button" onclick="t1Minus()">-</button><br>
+            <button type="button" id="t1CardSelect red" onclick=""><img src="./img/redCard.png" alt=""></button>
+            <input type="text" name="" id="t1CardName">
+            <button type="button" onclick="t1AddCard()">+</button>
+        </div>
+        <div>
+            <h2>Idő</h2>
+            <p id="timeDisplay">43:21</p>
+            <p id="halfTimeDisplay">1. félidő</p>
+            <br><br>
+            <button type="button" onclick="startMatch()">Meccs indítása</button>
+            <button type="button" onclick="stopMatch()">Meccs megállítása</button>
+            <br><br>
+            <input type="number" id="overtimeInput">
+            <button type="button" onclick="addOvertime()">Hosszabbítás</button>
+        </div>
+        <div>
+            <h2 id="t2Title">Csapat 2 neve</h2>
+            <p id="t2PointDisplay">1</p>
+            <button type="button" onclick="t2Plus()">+</button>
+            <button type="button" onclick="t2Minus()">-</button><br>
+            <button type="button" id="t1CardSelect" onclick=""><img src="./img/yellowCard.png" alt=""></button>
+            <input type="text" name="" id="t2CardName">
+            <button type="button" onclick="t2AddCard()">+</button>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
