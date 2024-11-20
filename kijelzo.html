@@ -10,37 +10,41 @@
     <div style="display: flex; gap: 50px">
         <div>
             <h2 id="t1Title">Csapat 1 neve</h2>
-            <p id="t1PointDisplay">2</p>
-            <button type="button" onclick="t1Plus()">+</button>
-            <button type="button" onclick="t1Minus()">-</button><br>
-            <button type="button" id="t1CardSelect red" onclick=""><img src="./img/redCard.png" alt=""></button>
+            <p id="t1PointDisplay">0</p>
+            <button type="button" onclick="addPoint('t1PointDisplay')">+</button>
+            <button type="button" onclick="removePoint('t1PointDisplay')">-</button><br>
+            <button type="button" id="t1CardSelect" class="red" onclick="cycleCard(1)"><img src="./img/redCard.png" alt=""></button>
             <input type="text" name="" id="t1CardName">
-            <button type="button" onclick="t1AddCard()">+</button>
+            <button type="button" onclick="addCard(1)">+</button>
+            <ul id="t1CardList">
+                <!-- <li id="card0"><span>Nagyka Lapál</span><button type="button" onclick="removeCard(0)">-</button></li> -->
+            </ul>
         </div>
         <div>
             <h2>Idő</h2>
-            <p id="timeDisplay">43:21</p>
+            <p id="timeDisplay">00:00</p>
             <p id="halfTimeDisplay">1. félidő</p>
             <br><br>
-            <button type="button" onclick="startMatch()">Meccs indítása</button>
-            <button type="button" onclick="stopMatch()">Meccs megállítása</button>
+            <button type="button" onclick="startMatch()" id="startMatchButton">Meccs indítása</button>
+            <button disabled type="button" onclick="stopMatch()" id="stopMatchButton">Meccs megállítása</button>
             <br><br>
-            <input type="number" id="overtimeInput">
-            <button type="button" onclick="addOvertime()">Hosszabbítás</button>
+            <input min="1" type="number" id="overtimeInput"> <label for="overtimeInput">perc</label>
+            <button disabled type="button" id="overtimeButton" onclick="addOvertime()">Hosszabbítás</button>
         </div>
         <div>
             <h2 id="t2Title">Csapat 2 neve</h2>
-            <p id="t2PointDisplay">1</p>
-            <button type="button" onclick="t2Plus()">+</button>
-            <button type="button" onclick="t2Minus()">-</button><br>
-            <button type="button" id="t1CardSelect" onclick=""><img src="./img/yellowCard.png" alt=""></button>
+            <p id="t2PointDisplay">0</p>
+            <button type="button" onclick="addPoint('t2PointDisplay')">+</button>
+            <button type="button" onclick="removePoint('t2PointDisplay')">-</button><br>
+            <button type="button" id="t2CardSelect" onclick="cycleCard(2)"><img src="./img/yellowCard.png" alt=""></button>
             <input type="text" name="" id="t2CardName">
-            <button type="button" onclick="t2AddCard()">+</button>
+            <button type="button" onclick="addCard(2)">+</button>
+            <ul id="t2CardList">
+                
+            </ul>
         </div>
     </div>
 
-
-
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>
