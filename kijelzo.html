@@ -21,15 +21,16 @@
             </ul>
         </div>
         <div>
-            <h2>Idő</h2>
-            <p id="timeDisplay">00:00</p>
             <p id="halfTimeDisplay">1. félidő</p>
+            <p id="timeDisplay">00:00</p>
+            <h2>Hosszabbítás</h2>
+            <p id="overtimeDisplay">00:00</p>
             <br><br>
-            <button type="button" onclick="startMatch()" id="startMatchButton">Meccs indítása</button>
-            <button disabled type="button" onclick="stopMatch()" id="stopMatchButton">Meccs megállítása</button>
+            <button type="button" onclick="startMatch()" id="startMatchButton">START</button>
+            <button disabled type="button" onclick="stopMatch()" id="stopMatchButton">STOP</button>
             <br><br>
             <input min="1" type="number" id="overtimeInput"> <label for="overtimeInput">perc</label>
-            <button disabled type="button" id="overtimeButton" onclick="addOvertime()">Hosszabbítás</button>
+            <button type="button" id="overtimeButton" onclick="addOvertime()">Hosszabbítás</button>
         </div>
         <div>
             <h2 id="t2Title">Csapat 2 neve</h2>
