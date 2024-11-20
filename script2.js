@@ -57,7 +57,12 @@ function startMatch() {
                 overtimeButton.disabled = false;
                 updateTimeDisplay();
             } else {
-                alert("Véget ért a mérkőzés!")
+                point1 = parseInt(document.getElementById("t1PointDisplay").textContent);
+                point2 = parseInt(document.getElementById("t2PointDisplay").textContent);
+                if (point1 == point2) alert("Véget ért a mérkőzés, az állás döntetlen!")
+                else if (point1 > point2) alert(`Véget ért a mérkőzés, a nyertes csapat a(z) ${localStorage.getItem("team1")}`)
+                else alert(`Véget ért a mérkőzés, a nyertes csapat a(z) ${localStorage.getItem("team2")}`)
+                
                 stopButton.disabled = true;
                 overtimeButton.disabled = true;
             }
