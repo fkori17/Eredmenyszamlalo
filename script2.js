@@ -1,9 +1,5 @@
 document.getElementById("t1Title").textContent = localStorage.getItem("team1");
 document.getElementById("t2Title").textContent = localStorage.getItem("team2");
-let halftime = localStorage.getItem("halftime");
-let totalTime = halftime * 60;
-let matchTime = 0;
-let overtime = 0;
 
 // Point management
 function changePoint(teamId, input) {
@@ -11,11 +7,16 @@ function changePoint(teamId, input) {
     if (pointDisplay >= 0) {
         document.getElementById(`t${teamId}PointDisplay`).textContent = pointDisplay;
     }
-    
 }
 
 // Time management
+let timerInterval;
+
 let firstHalf = true;
+let totalTime = localStorage.getItem("halftime") * 60;
+let matchTime = 0;
+let overtime = 0;
+
 let startButton = document.getElementById("startMatchButton");
 let stopButton = document.getElementById("stopMatchButton");
 let overtimeButton = document.getElementById("overtimeButton");
@@ -29,8 +30,6 @@ function updateTimeDisplay() {
 }
 updateTimeDisplay();
 
-
-let timerInterval;
 function startMatch() {
     startButton.disabled = true;
     stopButton.disabled = false;
@@ -73,7 +72,6 @@ function stopMatch() {
     clearInterval(timerInterval);
 }
 
-
 function updateOvertimeDisplay() {
     const minutes = Math.floor(overtime / 60).toString().padStart(2, '0');
     const seconds = (overtime % 60).toString().padStart(2, '0');
@@ -81,7 +79,7 @@ function updateOvertimeDisplay() {
 }
 function addOvertime() {
     overtimeInput = parseInt(document.getElementById("overtimeInput").value);
-    if (overtimeInput > 0 && overtimeInput <= halftime) {
+    if (overtimeInput > 0 && overtimeInput <= 99) {
         overtimeButton.disabled = true;
         overtime = overtimeInput * 60;
         updateOvertimeDisplay();
@@ -89,7 +87,7 @@ function addOvertime() {
 }
 
 
-
+//Card management
 function cycleCard(teamnumber) {
     cardselect =document.getElementById(`t${teamnumber}CardSelect`);
     if (cardselect.classList.contains("red")) {
@@ -110,18 +108,14 @@ function addCard(teamnumber) {
         if (cardselect.classList.contains("red")) {
             let li = document.createElement('li');
             li.setAttribute("id", `card${id}`)
-            console.log(`Piroslap ${name.value}`)
-            li.innerHTML = `<li id="card${id}"><span class="card redCard">${name.value}</span><button type="button" onclick="removeCard(${id})">-</button></li>`;
-            li.classList.add("redCard");
+            li.innerHTML = `<span class="card redCard">${name.value}</span><button type="button" onclick="removeCard(${id})">-</button>`;
             cardlist.append(li);
             name.value = "";
             id++;
         } else {
             let li = document.createElement('li');
             li.setAttribute("id", `card${id}`)
-            console.log(`Sárgalap ${name.value}`)
-            li.innerHTML = `<li id="card${id}"><span class="card yellowCard">${name.value}</span><button type="button" onclick="removeCard(${id})">-</button></li>`;
-            li.classList.add("yellowCard");
+            li.innerHTML = `<span class="card yellowCard">${name.value}</span><button type="button" onclick="removeCard(${id})">-</button>`;
             cardlist.append(li);
             name.value = "";
             id++;
