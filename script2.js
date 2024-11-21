@@ -18,7 +18,6 @@ function removePoint(id) {
 }
 
 // Time management
-let isOvertime = false;
 let firstHalf = true;
 let startButton = document.getElementById("startMatchButton");
 let stopButton = document.getElementById("stopMatchButton");
