@@ -6,15 +6,12 @@ let matchTime = 0;
 let overtime = 0;
 
 // Point management
-function addPoint(id) {
-    point =  parseInt(document.getElementById(id).textContent) + 1;
-    document.getElementById(id).textContent = point;
-}
-function removePoint(id) {
-    point =  parseInt(document.getElementById(id).textContent) - 1;
-    if (point >= 0) {
-        document.getElementById(id).textContent = point;
+function changePoint(teamId, input) {
+    pointDisplay = parseInt(document.getElementById(`t${teamId}PointDisplay`).textContent) + parseInt(input);
+    if (pointDisplay >= 0) {
+        document.getElementById(`t${teamId}PointDisplay`).textContent = pointDisplay;
     }
+    
 }
 
 // Time management
