@@ -89,7 +89,7 @@ function addOvertime() {
 
 //Card management
 function cycleCard(teamnumber) {
-    cardselect =document.getElementById(`t${teamnumber}CardSelect`);
+    cardselect = document.getElementById(`t${teamnumber}CardSelect`);
     if (cardselect.classList.contains("red")) {
         cardselect.classList.remove("red")
         cardselect.innerHTML = `<img src="./img/yellowCard.png" alt="">`
@@ -104,23 +104,15 @@ function addCard(teamnumber) {
     let cardselect = document.getElementById(`t${teamnumber}CardSelect`)
     let name = document.getElementById(`t${teamnumber}CardName`);
     let cardlist = document.getElementById(`t${teamnumber}CardList`);
-    if (name.value != "") {
-        if (cardselect.classList.contains("red")) {
+    let cardType = cardselect.classList.contains("red") ? "redCard" : "yellowCard" ;
+    if (name.value.trim()) {
             let li = document.createElement('li');
-            li.setAttribute("id", `card${id}`)
-            li.innerHTML = `<span class="card redCard">${name.value}</span><button type="button" onclick="removeCard(${id})">-</button>`;
-            cardlist.append(li);
-            name.value = "";
-            id++;
-        } else {
-            let li = document.createElement('li');
-            li.setAttribute("id", `card${id}`)
-            li.innerHTML = `<span class="card yellowCard">${name.value}</span><button type="button" onclick="removeCard(${id})">-</button>`;
+            li.id = `card${id}`;
+            li.innerHTML = `<span class="card ${cardType}">${name.value}</span><button type="button" onclick="removeCard(${id})">-</button>`;
             cardlist.append(li);
             name.value = "";
             id++;
         }
-    }
 }
 
 function removeCard(id) {
