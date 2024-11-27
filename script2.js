@@ -4,9 +4,7 @@ document.getElementById("t2Title").textContent = localStorage.getItem("team2");
 // Point management
 function changePoint(teamId, input) {
     pointDisplay = parseInt(document.getElementById(`t${teamId}PointDisplay`).textContent) + parseInt(input);
-    if (pointDisplay >= 0) {
-        document.getElementById(`t${teamId}PointDisplay`).textContent = pointDisplay;
-    }
+    pointDisplay >= 0 ? document.getElementById(`t${teamId}PointDisplay`).textContent = pointDisplay : "" ;
 }
 
 // Time management

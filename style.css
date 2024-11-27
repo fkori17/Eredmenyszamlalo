@@ -6,6 +6,14 @@
     --btn-red: #720000;
     --input-field: #ABABAB;
 }
+@font-face {
+    font-family: JockeyOne;
+    src: url(./JockeyOne-Regular.ttf);
+}
+@font-face {
+    font-family: jetBrains;
+    src: url(./JetBrainsMono-Regular.ttf);
+}
 body {
     background-color: var(--background-color);
     color: white;
