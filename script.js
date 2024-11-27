@@ -21,5 +21,5 @@ function openMatch() {
     localStorage.setItem("team1", team1Name);
     localStorage.setItem("team2", team2Name);
     localStorage.setItem("halftime", halftime);
-    window.open("/kijelzo.html", "_self");
+    window.open("./kijelzo.html", "_self");
 }
