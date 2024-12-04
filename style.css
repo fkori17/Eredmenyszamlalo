@@ -176,3 +176,17 @@ footer{
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
+#t1Title{
+    font-family: jetBrains;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 84.48px;
+    text-align: center;
+}
+#t2Title{
+    font-family: jetBrains;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 84.48px;
+    text-align: center;
+}
