@@ -26,6 +26,7 @@ body {
 }
 h1 {
     color: white;
+    height: 110px;
 }
 label {
     color: white;
@@ -55,4 +56,7 @@ li>button {
 }
 .yellowCard::before {
     background-image: url('img/yellowCard.png');
+}
+label, h1, p, button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
