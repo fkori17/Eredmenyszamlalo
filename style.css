@@ -194,3 +194,20 @@ footer{
     line-height: 84.48px;
     text-align: center;
 }
+#t1PointDisplay{
+    font-family: jetBrains;
+    font-size: 1400%;
+    font-weight: 400px;
+    text-align: center;
+    background-color: var(--foreground-color);
+    height: 52%;
+    width: 50%;
+    border-radius: 34px;
+    margin: auto;
+}
+.keret1{
+    height: 100%;
+    width: 300%;
+    border-radius: 57px;
+    background-color: var(--content-background-color);
+}
