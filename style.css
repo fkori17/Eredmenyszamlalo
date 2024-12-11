@@ -180,34 +180,101 @@ footer{
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-#t1Title{
+#t1Title, #t2Title{
     font-family: jetBrains;
     font-size: 64px;
     font-weight: 400;
     line-height: 84.48px;
     text-align: center;
 }
-#t2Title{
-    font-family: jetBrains;
-    font-size: 64px;
-    font-weight: 400;
-    line-height: 84.48px;
-    text-align: center;
-}
-#t1PointDisplay{
+
+#t1PointDisplay, #t2PointDisplay{
     font-family: jetBrains;
     font-size: 1400%;
-    font-weight: 400px;
+    font-weight: 400;
     text-align: center;
     background-color: var(--foreground-color);
     height: 52%;
-    width: 50%;
+    width: 75%;
     border-radius: 34px;
     margin: auto;
 }
+
 .keret1{
-    height: 100%;
-    width: 300%;
+    height: 150%;
+    width: 60vh;
     border-radius: 57px;
     background-color: var(--content-background-color);
 }
+.plussz{
+    font-family: jetBrains;
+    font-size: 400%;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 11px;
+    width: 20%;
+    height: 20%;
+    background-color: #005700;
+    color: #FFFFFF;
+    border-style: none;
+    margin-left: 27.5%;
+}
+.minusz{
+    font-family: jetBrains;
+    font-size: 400%;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 11px;
+    width: 20%;
+    height: 20%;
+    background-color: #720000;
+    color: #FFFFFF;
+    border-style: none;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+hr{
+    border: #101010, 1px solid;
+    width: 80%;
+}
+#t1CardSelect, #t2CardSelect{
+    background-color: var(--foreground-color);
+    border-style: none;
+    box-shadow: none;
+    border-radius: 11px;
+    margin-left: 10%;
+    height: 6vh;
+    width: 6vh;
+}
+#t1CardName, #t2CardName{
+    height: 6vh;
+    width: 35vh;
+    background-color: var(--foreground-color);
+    color: #FFFFFF;
+    font-family: jetBrains;
+    box-shadow: none;
+    border-style: none;
+    font-weight: 400;
+    font-size: 200%;
+    border-radius: 11px;
+}
+.plussz2{
+    font-family: jetBrains;
+    font-size: 200%;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 11px;
+    width: 6vh;
+    height: 6vh;
+    background-color: #005700;
+    color: #FFFFFF;
+    border-style: none;
+}
+/*
+flexbox kijelzohoz
+
+ justify-content: space-around;
+ align-content: space-around;
+ flex-wrap: nowrap;
+ flex-direction: column;
+*/

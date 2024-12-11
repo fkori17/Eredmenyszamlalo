@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="display: flex; gap: 50px">
+    <div style="display: flex; gap: 50px;">
         <div class="keret1">
             <h2 id="t1Title">Csapat 1 neve</h2>
             <p id="t1PointDisplay">0</p>
-            <button type="button" onclick="changePoint(1, 1)">+</button>
-            <button type="button" onclick="changePoint(1, -1)">-</button><br>
+            <button type="button" onclick="changePoint(1, 1)" class="plussz">+</button>
+            <button type="button" onclick="changePoint(1, -1)" class="minusz">-</button><br><hr>
             <button type="button" id="t1CardSelect" class="" onclick="cycleCard(1)"><img src="./img/yellowCard.png" alt=""></button>
-            <input type="text" autocomplete="off" id="t1CardName">
-            <button type="button" onclick="addCard(1)">+</button>
+            <input type="text" autocomplete="off" id="t1CardName" placeholder="Játékos neve">
+            <button type="button" onclick="addCard(1)" class="plussz2">+</button><hr>
             <ul id="t1CardList">
             </ul>
         </div>
@@ -31,16 +31,15 @@
             <input min="1" type="number" id="overtimeInput"> <label for="overtimeInput">perc</label>
             <button type="button" id="overtimeButton" onclick="addOvertime()">Hosszabbítás</button>
         </div>
-        <div>
+        <div class="keret1">
             <h2 id="t2Title">Csapat 2 neve</h2>
             <p id="t2PointDisplay">0</p>
-            <button type="button" onclick="changePoint(2, 1)">+</button>
-            <button type="button" onclick="changePoint(2, -1)">-</button><br>
+            <button type="button" onclick="changePoint(2, 1)" class="plussz">+</button>
+            <button type="button" onclick="changePoint(2, -1)" class="minusz">-</button><br><hr>
             <button type="button" id="t2CardSelect" onclick="cycleCard(2)"><img src="./img/yellowCard.png" alt=""></button>
-            <input type="text" autocomplete="off" id="t2CardName">
-            <button type="button" onclick="addCard(2)">+</button>
+            <input type="text" autocomplete="off" id="t2CardName" placeholder="Játékos neve">
+            <button type="button" onclick="addCard(2)" class="plussz2">+</button><hr>
             <ul id="t2CardList">
-                
             </ul>
         </div>
     </div>
