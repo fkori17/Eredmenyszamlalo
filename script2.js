@@ -40,9 +40,6 @@ function startMatch() {
             }
         }
         updateCardList();
-        cards.forEach(element => {
-            console.log(element);
-        });
         if (matchTime < totalTime) {
             matchTime++;
             updateTimeDisplay();
@@ -99,13 +96,10 @@ let id = 0;
 function addCard(teamnumber) {
     let name = document.getElementById(`t${teamnumber}CardName`);
     if (name.value.trim()) {
-        cards.push({name: name.value, team: teamnumber, time: 6});
+        cards.push({name: name.value, team: teamnumber, time: 120});
         name.value = "";
         updateCardList();
         }
-    cards.forEach(element => {
-        console.log(element);
-    });
 }
 
 function updateCardList() {

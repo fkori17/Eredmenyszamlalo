@@ -2,8 +2,17 @@
     --background-color: #101010;
     --content-background-color: #252525;
     --foreground-color: #313131;
-    --btn-green: #217121;
+
+    --btn-green: hsl(120, 55%, 29%);
+    --btn-green-hover: hsl(120, 65%, 35%);
+    --btn-green-disabled: hsl(120, 25%, 19%);
+
     --btn-red: #720000;
+    --btn-red-hover: hsl(0, 100%, 32%);
+    --btn-red-disabled: hsl(0, 20%, 22%);
+
+    --btn-foreground-hover: #424242;
+
     --input-field: #ABABAB;
 }
 @font-face {
@@ -379,3 +388,70 @@ flexbox kijelzohoz
  flex-wrap: nowrap;
  flex-direction: column;
 */
+
+
+/* BUTTON HOVER, DISABLED, ACTIVE */
+button {
+    transition: all 100ms;
+}
+
+/* Green disabled */
+#openMatch:disabled, #startMatchButton:disabled {
+    cursor:not-allowed;
+    background-color: var(--btn-green-disabled);
+}
+
+/* Green hover */
+#openMatch:hover:not(:disabled),
+#startMatchButton:hover:not(:disabled),
+.plussz:hover,
+.plussz2:hover {
+    cursor: pointer;
+    background-color: var(--btn-green-hover);
+}
+
+/* Green Active */
+#openMatch:active:not(:disabled),
+#startMatchButton:active:not(:disabled),
+.plussz:active,
+.plussz2:active {
+    transform: scale(0.92);
+    box-shadow: inset 0px 0px 10px black;
+}
+
+/* Red disabled */
+#stopMatchButton:disabled {
+    background-color: var(--btn-red-disabled);
+    cursor:not-allowed;
+}
+
+/* Red hover */
+#stopMatchButton:hover:not(:disabled),
+.minusz:hover {    
+    cursor: pointer;
+    background-color: var(--btn-red-hover);
+}
+
+/* Red active */
+#stopMatchButton:active:not(:disabled),
+.minusz:active {
+    transform: scale(0.92);
+    box-shadow: inset 0px 0px 10px black;
+}
+
+/* Gray disabled */
+#overtimeButton:disabled {
+    background-color: var(--foreground-color);
+    cursor: not-allowed;
+    color: gray;
+}    
+/* Gray hover */
+#overtimeButton:hover:not(:disabled) {
+    background-color: var(--btn-foreground-hover);
+}
+
+/* Gray active */
+#overtimeButton:active:not(:disabled) {
+    transform: scale(0.95);
+    box-shadow: inset 0px 0px 10px black;
+}
