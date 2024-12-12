@@ -351,7 +351,7 @@ hr{
     margin-top: 1px;
 }
 #overtimeInput{
-    font-family: JetBrains Mono;
+    font-family: jetBrains;
     font-size: 300%;
     font-weight: 400;
     text-align: right;
@@ -365,21 +365,27 @@ hr{
     margin-left: 35%;
 }
 #perc{
+    font-family: jetBrains;
     font-size: 300%;
+    font-weight: 400;
     margin-left: 2%;
 }
 #overtimeButton{
-    width: 30%;
-    height: 6vh;
+    width: 35%;
+    height: 7vh;
     color: #FFFFFF;
     background-color: var(--foreground-color);
     box-shadow: none;
     border-style: none;
     border-radius: 22px;
     font-size: 150%;
-    margin-left: 35%;
+    margin-left: 32.5%;
     margin-top: 5%;
     margin-bottom: 5%;
+    font-family: jetBrains;
+}
+ul{
+    margin-bottom: 28%;
 }
 /*
 flexbox kijelzohoz
