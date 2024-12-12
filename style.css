@@ -195,13 +195,13 @@ footer{
     text-align: center;
     background-color: var(--foreground-color);
     height: 52%;
-    width: 40%;
+    width: 50%;
     border-radius: 34px;
     margin: auto;
 }
 
 .keret1{
-    height: 150%;
+    height: 100%;
     width: 60vh;
     border-radius: 57px;
     background-color: var(--content-background-color);
@@ -258,6 +258,7 @@ hr{
     font-weight: 400;
     font-size: 200%;
     border-radius: 11px;
+    margin-left: 15%;
 }
 .plussz2{
     font-family: jetBrains;
@@ -379,6 +380,10 @@ hr{
 }
 ul{
     margin-bottom: 28%;
+}
+li{
+    font-size: 200%;
+    text-align: center;
 }
 /*
 flexbox kijelzohoz
