@@ -190,9 +190,8 @@ footer{
 }
 #t1Title, #t2Title{
     font-family: jetBrains;
-    font-size: 64px;
+    font-size: 450%;
     font-weight: 400;
-    line-height: 84.48px;
     text-align: center;
 }
 
@@ -203,7 +202,7 @@ footer{
     text-align: center;
     background-color: var(--foreground-color);
     height: 52%;
-    width: 75%;
+    width: 40%;
     border-radius: 34px;
     margin: auto;
 }
@@ -216,30 +215,31 @@ footer{
 }
 .plussz{
     font-family: jetBrains;
-    font-size: 400%;
+    font-size: 300%;
     font-weight: 400;
     text-align: center;
     border-radius: 11px;
-    width: 20%;
-    height: 20%;
+    width: 15%;
+    height: 15%;
     background-color: #005700;
     color: #FFFFFF;
     border-style: none;
-    margin-left: 27.5%;
+    margin-left: 32.5%;
 }
 .minusz{
     font-family: jetBrains;
-    font-size: 400%;
+    font-size: 300%;
     font-weight: 400;
     text-align: center;
     border-radius: 11px;
-    width: 20%;
-    height: 20%;
+    width: 15%;
+    height: 15%;
     background-color: #720000;
     color: #FFFFFF;
     border-style: none;
     margin-left: 5%;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 hr{
     border: #101010, 1px solid;
@@ -277,6 +277,109 @@ hr{
     background-color: #005700;
     color: #FFFFFF;
     border-style: none;
+}
+.keret2{
+    box-shadow: none;
+    border-style: none;
+    border-radius: 57px;
+    height: 150%;
+    width: 60vh;
+    background-color: var(--content-background-color);
+}
+#halfTimeDisplay{
+    font-family: jetBrains;
+    font-size: 350%;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5%;
+}
+#timeDisplay{
+    font-family: JockeyOne;
+    margin-top: 5%;
+    font-size: 800%;
+    font-weight: 400;
+    text-align: center;
+    border-style: none;
+    border-radius: 34px;
+    background-color: var(--foreground-color);
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+.h2{
+    margin-top: 5%;
+    font-family: jetBrains;
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+#overtimeDisplay{
+    font-family: JockeyOne;
+    margin-top: 5%;
+    font-size: 500%;
+    font-weight: 400;
+    text-align: center;
+    border-style: none;
+    border-radius: 34px;
+    background-color: var(--foreground-color);
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 1px;
+}
+#startMatchButton{
+    background-color: var(--btn-green);
+    color: #FFFFFF;
+    width: 14vh;
+    height: 6vh;
+    box-shadow: none;
+    border-radius: 22px;
+    border-style: none;
+    font-size: 200%;
+    margin-left: 22.5%;
+    margin-top: 1px;
+}
+#stopMatchButton{
+    background-color: var(--btn-red);
+    color: #FFFFFF;
+    width: 14vh;
+    height: 6vh;
+    box-shadow: none;
+    border-radius: 22px;
+    border-style: none;
+    font-size: 200%;
+    margin-left: 5%;
+    margin-top: 1px;
+}
+#overtimeInput{
+    font-family: JetBrains Mono;
+    font-size: 300%;
+    font-weight: 400;
+    text-align: right;
+    box-shadow: none;
+    border-style: none;
+    border-radius: 22px;
+    width: 6vh;
+    height: 6vh;
+    background-color: var(--foreground-color);
+    color: #FFFFFF;
+    margin-left: 35%;
+}
+#perc{
+    font-size: 300%;
+    margin-left: 2%;
+}
+#overtimeButton{
+    width: 30%;
+    height: 6vh;
+    color: #FFFFFF;
+    background-color: var(--foreground-color);
+    box-shadow: none;
+    border-style: none;
+    border-radius: 22px;
+    font-size: 150%;
+    margin-left: 35%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 /*
 flexbox kijelzohoz
