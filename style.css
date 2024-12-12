@@ -121,6 +121,8 @@ footer{
     border-radius: 25px;
     background-color: var(--input-field);
     margin-right: 300px;
+    border-style: none;
+    box-shadow: none;
 }
 #team2Input{
     font-family: JockeyOne;
@@ -137,6 +139,8 @@ footer{
     left: 215px;
     border-radius: 25px;
     background-color: var(--input-field);
+    border-style: none;
+    box-shadow: none;
 }
 #halftimeInput{
     font-family: JockeyOne;
@@ -154,6 +158,8 @@ footer{
     text-decoration-skip-ink: none;
     background-color: var(--input-field);
     margin-bottom: 20px;
+    border-style: none;
+    box-shadow: none;
 }
 .felido{
     font-size: 32px;
@@ -179,6 +185,8 @@ footer{
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    border-style: none;
+    box-shadow: none;
 }
 #t1Title, #t2Title{
     font-family: jetBrains;
