@@ -28,10 +28,21 @@ function updateTimeDisplay() {
 }
 updateTimeDisplay();
 
+let cards = [];
 function startMatch() {
     startButton.disabled = true;
     stopButton.disabled = false;
     timerInterval = setInterval(() => {
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].time--;
+            if (cards[i].time < 0) {
+                cards.splice(i, 1);
+            }
+        }
+        updateCardList();
+        cards.forEach(element => {
+            console.log(element);
+        });
         if (matchTime < totalTime) {
             matchTime++;
             updateTimeDisplay();
@@ -84,35 +95,23 @@ function addOvertime() {
     }
 }
 
-
-//Card management
-function cycleCard(teamnumber) {
-    cardselect = document.getElementById(`t${teamnumber}CardSelect`);
-    if (cardselect.classList.contains("red")) {
-        cardselect.classList.remove("red")
-        cardselect.innerHTML = `<img src="./img/yellowCard.png" alt="">`
-    } else {
-        cardselect.classList.add("red")
-        cardselect.innerHTML = `<img src="./img/redCard.png" alt="">`
-    }
-}
-
 let id = 0;
 function addCard(teamnumber) {
-    let cardselect = document.getElementById(`t${teamnumber}CardSelect`)
     let name = document.getElementById(`t${teamnumber}CardName`);
-    let cardlist = document.getElementById(`t${teamnumber}CardList`);
-    let cardType = cardselect.classList.contains("red") ? "redCard" : "yellowCard" ;
     if (name.value.trim()) {
-            let li = document.createElement('li');
-            li.id = `card${id}`;
-            li.innerHTML = `<span class="card ${cardType}">${name.value}</span><button type="button" onclick="removeCard(${id})">-</button>`;
-            cardlist.append(li);
-            name.value = "";
-            id++;
+        cards.push({name: name.value, team: teamnumber, time: 6});
+        name.value = "";
+        updateCardList();
         }
+    cards.forEach(element => {
+        console.log(element);
+    });
 }
 
-function removeCard(id) {
-    document.getElementById(`card${id}`).remove();
+function updateCardList() {
+    document.getElementById(`t1CardList`).innerHTML = "";
+    document.getElementById(`t2CardList`).innerHTML = "";
+    cards.forEach(element => {
+        document.getElementById(`t${element.team}CardList`).innerHTML += `<li><span class="card">${Math.floor(element.time / 60).toString().padStart(2, '0')}:${(element.time % 60).toString().padStart(2, '0')} ${element.name}</span></li>`;
+    })
 }

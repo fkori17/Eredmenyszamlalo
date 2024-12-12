@@ -67,22 +67,6 @@ ul {
 li>button {
     float: right;
 }
-.card::before {
-    content: "";
-    background-size: 25px 25px;
-    display: inline-flex;
-    align-items: center;
-    width: 25px;
-    height: 35px;
-    padding-right: 10px;
-    background-repeat: no-repeat;
-}
-.redCard::before {
-    background-image: url('img/redCard.png');
-}
-.yellowCard::before {
-    background-image: url('img/yellowCard.png');
-}
 label, h1, p, button{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
