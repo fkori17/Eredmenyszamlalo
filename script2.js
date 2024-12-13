@@ -37,6 +37,7 @@ function startMatch() {
             cards[i].time--;
             if (cards[i].time < 0) {
                 cards.splice(i, 1);
+                i = 0;
             }
         }
         updateCardList();

@@ -457,6 +457,7 @@ button {
 /* Gray hover */
 #overtimeButton:hover:not(:disabled) {
     background-color: var(--btn-foreground-hover);
+    cursor: pointer;
 }
 
 /* Gray active */
