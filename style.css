@@ -206,6 +206,18 @@ footer{
     border-radius: 57px;
     background-color: var(--content-background-color);
 }
+.keret2{
+    box-shadow: none;
+    border-style: none;
+    border-radius: 57px;
+    height: 100%;
+    width: 60vh;
+    background-color: var(--content-background-color);
+}
+/*
+flexboxal 
+align items strecth v mi
+*/
 .plussz{
     font-family: jetBrains;
     font-size: 300%;
@@ -271,14 +283,6 @@ hr{
     background-color: #005700;
     color: #FFFFFF;
     border-style: none;
-}
-.keret2{
-    box-shadow: none;
-    border-style: none;
-    border-radius: 57px;
-    height: 150%;
-    width: 60vh;
-    background-color: var(--content-background-color);
 }
 #halfTimeDisplay{
     font-family: jetBrains;
